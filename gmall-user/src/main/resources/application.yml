@@ -1,1 +1,18 @@
-
+#服务端口号
+spring:
+#jdbc
+  datasource:
+    password: root
+    username: root
+    url: jdbc:mysql://localhost:3306/gmall_study?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    cache: false
+#mybatis配置
+mybatis:
+  type-aliases-package: com.atguigu.gmall.user.entity
+  configuration:
+    map-underscore-to-camel-case: true #数据库中的下划线转成Java的驼峰
+  mapper-locations: mapper/*.xml
+server:
+  port: 8080
