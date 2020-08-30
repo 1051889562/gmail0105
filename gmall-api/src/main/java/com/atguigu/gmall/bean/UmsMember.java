@@ -1,103 +1,48 @@
-package com.atguigu.gmall.user.entity;
+package com.atguigu.gmall.bean;
 
-import java.util.Date;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.Date;
 
-/**
- * 会员表(UmsMember)实体类
- *
- * @author LiWeiJie
- * @since 2020-07-11 15:19:21
- */
-public class UmsMember implements Serializable {
-    private static final long serialVersionUID = 703914242301814666L;
-    
-    private Long id;
-    
-    private Long memberLevelId;
-    /**
-    * 用户名
-    */
+public class UmsMember implements Serializable{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
+    private String memberLevelId;
     private String username;
-    /**
-    * 密码
-    */
     private String password;
-    /**
-    * 昵称
-    */
     private String nickname;
-    /**
-    * 手机号码
-    */
     private String phone;
-    /**
-    * 帐号启用状态:0->禁用；1->启用
-    */
-    private Integer status;
-    /**
-    * 注册时间
-    */
+    private int status;
     private Date createTime;
-    /**
-    * 头像
-    */
     private String icon;
-    /**
-    * 性别：0->未知；1->男；2->女
-    */
-    private Integer gender;
-    /**
-    * 生日
-    */
+    private int gender;
     private Date birthday;
-    /**
-    * 所做城市
-    */
     private String city;
-    /**
-    * 职业
-    */
     private String job;
-    /**
-    * 个性签名
-    */
     private String personalizedSignature;
-    /**
-    * 用户来源
-    */
-    private Integer sourceType;
-    /**
-    * 积分
-    */
-    private Integer integration;
-    /**
-    * 成长值
-    */
-    private Integer growth;
-    /**
-    * 剩余抽奖次数
-    */
-    private Integer luckeyCount;
-    /**
-    * 历史积分数量
-    */
-    private Integer historyIntegration;
+    private int sourceType;
+    private int integration;
+    private int growth;
+    private int luckeyCount;
+    private int historyIntegration;
 
-
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Long getMemberLevelId() {
+    public String getMemberLevelId() {
         return memberLevelId;
     }
 
-    public void setMemberLevelId(Long memberLevelId) {
+    public void setMemberLevelId(String memberLevelId) {
         this.memberLevelId = memberLevelId;
     }
 
@@ -133,11 +78,11 @@ public class UmsMember implements Serializable {
         this.phone = phone;
     }
 
-    public Integer getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
@@ -157,11 +102,11 @@ public class UmsMember implements Serializable {
         this.icon = icon;
     }
 
-    public Integer getGender() {
+    public int getGender() {
         return gender;
     }
 
-    public void setGender(Integer gender) {
+    public void setGender(int gender) {
         this.gender = gender;
     }
 
@@ -197,44 +142,48 @@ public class UmsMember implements Serializable {
         this.personalizedSignature = personalizedSignature;
     }
 
-    public Integer getSourceType() {
+    public int getSourceType() {
         return sourceType;
     }
 
-    public void setSourceType(Integer sourceType) {
+    public void setSourceType(int sourceType) {
         this.sourceType = sourceType;
     }
 
-    public Integer getIntegration() {
+    public int getIntegration() {
         return integration;
     }
 
-    public void setIntegration(Integer integration) {
+    public void setIntegration(int integration) {
         this.integration = integration;
     }
 
-    public Integer getGrowth() {
+    public int getGrowth() {
         return growth;
     }
 
-    public void setGrowth(Integer growth) {
+    public void setGrowth(int growth) {
         this.growth = growth;
     }
 
-    public Integer getLuckeyCount() {
+    public int getLuckeyCount() {
         return luckeyCount;
     }
 
-    public void setLuckeyCount(Integer luckeyCount) {
+    public void setLuckeyCount(int luckeyCount) {
         this.luckeyCount = luckeyCount;
     }
 
-    public Integer getHistoryIntegration() {
+    public int getHistoryIntegration() {
         return historyIntegration;
     }
 
-    public void setHistoryIntegration(Integer historyIntegration) {
+    public void setHistoryIntegration(int historyIntegration) {
         this.historyIntegration = historyIntegration;
     }
+
+
+
+
 
 }
